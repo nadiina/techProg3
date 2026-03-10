@@ -5,7 +5,8 @@ import * as api from './contactProp';
 import ContactList from "./contactList";
 
 vi.mock('next/image', () => ({
-    default: (props: any) => <img {...props} />
+    // eslint-disable-next-line @next/next/no-img-element
+    default: (props: any) => <img alt="mock" {...props} />
 }));
 
 vi.mock('./contactProp', () => ({
