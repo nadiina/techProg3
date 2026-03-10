@@ -24,3 +24,6 @@ jobs:
 
       - name: Build project
         run: npm run build
+
+      - name: Run Unit Tests with Coverage
+        run: npm run test:coverage

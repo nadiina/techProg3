@@ -1,6 +1,6 @@
 'use client'
 import React, { useState, useEffect, useRef } from 'react';
-import {addContact, deleteContact, getContacts, updateContact} from "@/components/contacts/contactProp";
+import { addContact, deleteContact, getContacts, updateContact } from "./contactProp";
 import notFound from "../../public/notFound.jpg"
 import Image from "next/image";
 
