@@ -73,7 +73,7 @@ export const ContactList: React.FC = () => {
             {contacts.length === 0 ? (
                 <div className="flex justify-center items-center h-64">
                     <Image src={notFound} alt="No contacts" height={160} width={120} />
-                    <p className="text-gray-500 text-sm ml-4">No contacts found</p>
+                    <p className="text-gray-500 text-sm ml-4">Список порожній</p>
                 </div>
             ) : (
                 <>
