@@ -53,4 +53,40 @@ describe('Contact API Functions', () => {
             body: JSON.stringify(updateData),
         });
     });
+    it('addContact: must make a POST request and update localStorage', async () => {
+        const newContact = { name: 'New User', phones: '999' };
+        const mockUpdatedContacts = [{ id: '1', name: 'New User', phones: '999' }];
+
+        (global.fetch as any).mockResolvedValue({
+            json: async () => mockUpdatedContacts,
+            ok: true
+        });
+
+        await addContact(newContact);
+
+        expect(global.fetch).toHaveBeenCalledWith('http://localhost:4000/contacts', expect.objectContaining({
+            method: 'POST',
+            body: JSON.stringify(newContact)
+        }));
+
+        expect(global.localStorage.setItem).toHaveBeenCalledWith('contacts', JSON.stringify(mockUpdatedContacts));
+    });
+    it('addContact: should make a POST request and update localStorage', async () => {
+        const newContact = { name: 'New User', phones: '999' };
+        const mockUpdatedContacts = [{ id: '1', name: 'New User', phones: '999' }];
+
+        (global.fetch as any).mockResolvedValue({
+            json: async () => mockUpdatedContacts,
+            ok: true
+        });
+
+        await addContact(newContact);
+
+        expect(global.fetch).toHaveBeenCalledWith('http://localhost:4000/contacts', expect.objectContaining({
+            method: 'POST',
+            body: JSON.stringify(newContact)
+        }));
+
+        expect(global.localStorage.setItem).toHaveBeenCalledWith('contacts', JSON.stringify(mockUpdatedContacts));
+    });
 });

@@ -15,7 +15,7 @@ export async function updateContact(id: string, data: any) {
 
 export async function deleteContact(id: string) {
     await fetch(`http://localhost:4000/contacts/${id}`, {
-        method: 'POST'
+        method: 'DELETE'
     });
 }
 
