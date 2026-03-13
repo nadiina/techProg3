@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom/vitest';
 import { describe, it, expect, vi } from 'vitest';
-import ProfilePage from './ProfilePage';
+import ProfilePage from './profilePage';
 
 vi.mock('@mui/icons-material/AccountBox', () => ({
     default: () => <span data-testid="mock-icon" />

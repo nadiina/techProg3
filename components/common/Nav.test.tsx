@@ -1,7 +1,7 @@
 import { render, screen, fireEvent, cleanup } from '@testing-library/react';
 import '@testing-library/jest-dom/vitest';
 import { describe, it, expect, vi, afterEach } from 'vitest';
-import Nav from './Nav';
+import Nav from './nav';
 
 vi.mock('next/link', () => ({
     default: ({ children, href, className }: any) => (
