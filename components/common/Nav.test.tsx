@@ -9,7 +9,7 @@ vi.mock('next/link', () => ({
     )
 }));
 
-describe('Компонент Nav', () => {
+describe('Nav', () => {
 
     afterEach(() => {
         cleanup();
